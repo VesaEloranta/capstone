@@ -251,3 +251,9 @@ Processing by UiController#index as HTML
 Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/vesaeloranta/Desktop/Ruby on Rails Web Development/6. Capstone - Photo Tourist Web Application /6.1. Technical Architecture and API Development Setup/capstone_demoapp/config/environment.rb:5)
