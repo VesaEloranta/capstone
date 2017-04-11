@@ -1,0 +1,233 @@
+  [1m[35m (25.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2421545657487532380);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (34.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-04-06 11:46:31 UTC], ["updated_at", 2017-04-06 11:46:31 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2421545657487532380)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2421545657487532380);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2421545657487532380)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2017-04-06 14:59:26 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb (8.6ms)
+Completed 200 OK in 47ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2421545657487532380);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (36.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateFoos (20170410062918)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (157.8ms)[0m  [1m[35mCREATE TABLE "foos" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170410062918"]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (7.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (5.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(2421545657487532380)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (17.6ms)[0m  [1m[32mINSERT INTO "foos" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "test"], ["created_at", 2017-04-10 06:50:01 UTC], ["updated_at", 2017-04-10 06:50:01 UTC]]
+  [1m[35m (58.9ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2017-04-10 09:50:42 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (18.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb (8.7ms)
+Completed 200 OK in 29ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/foos" for ::1 at 2017-04-10 09:51:08 +0300
+Processing by FoosController#index as JSON
+  Rendering foos/index.json.jbuilder
+  [1m[36mFoo Load (28.1ms)[0m  [1m[34mSELECT "foos".* FROM "foos"[0m
+  Rendered foos/_foo.json.jbuilder (1.2ms)
+  Rendered foos/index.json.jbuilder (77.4ms)
+Completed 200 OK in 87ms (Views: 31.1ms | ActiveRecord: 48.5ms)
+
+
+Started GET "/api/foos/1" for ::1 at 2017-04-10 09:51:57 +0300
+Processing by FoosController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mFoo Load (0.2ms)[0m  [1m[34mSELECT  "foos".* FROM "foos" WHERE "foos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering foos/show.json.jbuilder
+  Rendered foos/_foo.json.jbuilder (1.5ms)
+  Rendered foos/show.json.jbuilder (3.0ms)
+Completed 200 OK in 412ms (Views: 4.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/bars" for ::1 at 2017-04-10 10:46:48 +0300
+Processing by BarsController#index as JSON
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Bar::Mongoid):
+  
+app/models/bar.rb:2:in `<class:Bar>'
+app/models/bar.rb:1:in `<top (required)>'
+app/controllers/bars_controller.rb:7:in `index'
+  Rendering /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (22.7ms)
+  Rendered /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (108.9ms)
+Started GET "/api/bars" for ::1 at 2017-04-10 10:47:55 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (12.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BarsController#index as JSON
+  Rendering bars/index.json.jbuilder
+  Rendered bars/_bar.json.jbuilder (0.8ms)
+  Rendered bars/_bar.json.jbuilder (0.2ms)
+  Rendered bars/_bar.json.jbuilder (0.2ms)
+  Rendered bars/index.json.jbuilder (12.4ms)
+Completed 200 OK in 28ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/bars/1" for ::1 at 2017-04-10 10:48:01 +0300
+Processing by BarsController#show as JSON
+  Parameters: {"id"=>"1"}
+Completed 404 Not Found in 238ms (ActiveRecord: 0.0ms)
+
+
+  
+Mongoid::Errors::DocumentNotFound (
+message:
+  Document(s) not found for class Bar with id(s) 1.
+summary:
+  When calling Bar.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 1 ... (1 total) and the following ids were not found: 1.
+resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  
+app/controllers/bars_controller.rb:67:in `set_bar'
+  Rendering /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.2ms)
+  Rendering /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.1ms)
+  Rendered /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.6ms)
+Started GET "/api/bars/58eb38404a947e783f71274f" for ::1 at 2017-04-10 10:48:31 +0300
+Processing by BarsController#show as JSON
+  Parameters: {"id"=>"58eb38404a947e783f71274f"}
+  Rendering bars/show.json.jbuilder
+  Rendered bars/_bar.json.jbuilder (0.6ms)
+  Rendered bars/show.json.jbuilder (1.9ms)
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (23.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "foos"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "foos" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "test1"], ["created_at", 2017-04-10 13:10:37 UTC], ["updated_at", 2017-04-10 13:10:37 UTC]]
+  [1m[35m (37.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "foos" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "test2"], ["created_at", 2017-04-10 13:10:37 UTC], ["updated_at", 2017-04-10 13:10:37 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "foos" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "test3"], ["created_at", 2017-04-10 13:10:37 UTC], ["updated_at", 2017-04-10 13:10:37 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "foos"[0m
+Started GET "/api/foos" for ::1 at 2017-04-10 16:12:03 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (20.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoosController#index as JSON
+  Rendering foos/index.json.jbuilder
+  [1m[36mFoo Load (99.5ms)[0m  [1m[34mSELECT "foos".* FROM "foos"[0m
+  Rendered foos/_foo.json.jbuilder (1.2ms)
+  Rendered foos/_foo.json.jbuilder (0.3ms)
+  Rendered foos/_foo.json.jbuilder (0.3ms)
+  Rendered foos/_foo.json.jbuilder (0.3ms)
+  Rendered foos/index.json.jbuilder (142.7ms)
+Completed 200 OK in 182ms (Views: 63.5ms | ActiveRecord: 103.9ms)
+
+
+Started GET "/api/bars" for ::1 at 2017-04-10 16:14:19 +0300
+Processing by BarsController#index as JSON
+  Rendering bars/index.json.jbuilder
+  Rendered bars/_bar.json.jbuilder (1.2ms)
+  Rendered bars/_bar.json.jbuilder (0.4ms)
+  Rendered bars/_bar.json.jbuilder (0.3ms)
+  Rendered bars/index.json.jbuilder (42.6ms)
+Completed 200 OK in 59ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/foos" for ::1 at 2017-04-11 09:59:28 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (11.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoosController#index as JSON
+  Rendering foos/index.json.jbuilder
+  [1m[36mFoo Load (15.9ms)[0m  [1m[34mSELECT "foos".* FROM "foos"[0m
+  Rendered foos/_foo.json.jbuilder (0.9ms)
+  Rendered foos/_foo.json.jbuilder (0.3ms)
+  Rendered foos/_foo.json.jbuilder (0.3ms)
+  Rendered foos/_foo.json.jbuilder (0.2ms)
+  Rendered foos/index.json.jbuilder (97.6ms)
+Completed 200 OK in 194ms (Views: 75.8ms | ActiveRecord: 57.5ms)
+
+
+Started GET "/api/foos" for ::1 at 2017-04-11 10:00:29 +0300
+Processing by FoosController#index as JSON
+  Rendering foos/index.json.jbuilder
+  [1m[36mFoo Load (1.9ms)[0m  [1m[34mSELECT "foos".* FROM "foos"[0m
+  Rendered foos/_foo.json.jbuilder (1.0ms)
+  Rendered foos/_foo.json.jbuilder (0.3ms)
+  Rendered foos/_foo.json.jbuilder (0.3ms)
+  Rendered foos/_foo.json.jbuilder (0.3ms)
+  Rendered foos/index.json.jbuilder (9.5ms)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 1.9ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/vesaeloranta/Desktop/Ruby on Rails Web Development/6. Capstone - Photo Tourist Web Application /6.1. Technical Architecture and API Development Setup/capstone_demoapp/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/vesaeloranta/Desktop/Ruby on Rails Web Development/6. Capstone - Photo Tourist Web Application /6.1. Technical Architecture and API Development Setup/capstone_demoapp/config/environment.rb:5)
+Started GET "/api/foos" for ::1 at 2017-04-11 10:09:26 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (8.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoosController#index as JSON
+  Rendering foos/index.json.jbuilder
+  [1m[36mFoo Load (2.0ms)[0m  [1m[34mSELECT "foos".* FROM "foos"[0m
+  Rendered foos/_foo.json.jbuilder (1.4ms)
+  Rendered foos/_foo.json.jbuilder (0.4ms)
+  Rendered foos/_foo.json.jbuilder (0.3ms)
+  Rendered foos/_foo.json.jbuilder (0.4ms)
+  Rendered foos/index.json.jbuilder (55.3ms)
+Completed 200 OK in 100ms (Views: 72.1ms | ActiveRecord: 9.6ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/vesaeloranta/Desktop/Ruby on Rails Web Development/6. Capstone - Photo Tourist Web Application /6.1. Technical Architecture and API Development Setup/capstone_demoapp/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/vesaeloranta/Desktop/Ruby on Rails Web Development/6. Capstone - Photo Tourist Web Application /6.1. Technical Architecture and API Development Setup/capstone_demoapp/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/vesaeloranta/Desktop/Ruby on Rails Web Development/6. Capstone - Photo Tourist Web Application /6.1. Technical Architecture and API Development Setup/capstone_demoapp/config/environment.rb:5)
