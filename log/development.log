@@ -257,3 +257,161 @@ them to actual class references.  For example:
   "Rack::Cors" => Rack::Cors
 
  (called from <top (required)> at /Users/vesaeloranta/Desktop/Ruby on Rails Web Development/6. Capstone - Photo Tourist Web Application /6.1. Technical Architecture and API Development Setup/capstone_demoapp/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/vesaeloranta/Desktop/Ruby on Rails Web Development/6. Capstone - Photo Tourist Web Application /6.1. Technical Architecture and API Development Setup/capstone_demoapp/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/vesaeloranta/Desktop/Ruby on Rails Web Development/6. Capstone - Photo Tourist Web Application /6.1. Technical Architecture and API Development Setup/capstone_demoapp/config/environment.rb:5)
+  [1m[35m (26.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2421545657487532380);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (4.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCities (20170412102223)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (119.3ms)[0m  [1m[35mCREATE TABLE "cities" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170412102223"]]
+  [1m[35m (10.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2421545657487532380)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/vesaeloranta/Desktop/Ruby on Rails Web Development/6. Capstone - Photo Tourist Web Application /6.1. Technical Architecture and API Development Setup/capstone_demoapp/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Baltimore"], ["created_at", 2017-04-12 10:31:54 UTC], ["updated_at", 2017-04-12 10:31:54 UTC]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/vesaeloranta/Desktop/Ruby on Rails Web Development/6. Capstone - Photo Tourist Web Application /6.1. Technical Architecture and API Development Setup/capstone_demoapp/config/environment.rb:5)
+Started GET "/" for ::1 at 2017-04-12 13:32:18 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UiController#index as HTML
+  Rendering ui/index.html.erb
+  Rendered ui/index.html.erb (3.1ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/cities" for ::1 at 2017-04-12 13:32:27 +0300
+Processing by CitiesController#index as JSON
+  Rendering cities/index.json.jbuilder
+  [1m[36mCity Load (2.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  Rendered cities/_city.json.jbuilder (1.0ms)
+  Rendered cities/index.json.jbuilder (58.8ms)
+Completed 200 OK in 81ms (Views: 39.6ms | ActiveRecord: 24.5ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/vesaeloranta/Desktop/Ruby on Rails Web Development/6. Capstone - Photo Tourist Web Application /6.1. Technical Architecture and API Development Setup/capstone_demoapp/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (89.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (26.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Baltimore"], ["created_at", 2017-04-12 10:46:50 UTC], ["updated_at", 2017-04-12 10:46:50 UTC]]
+  [1m[35m (12.5ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/vesaeloranta/Desktop/Ruby on Rails Web Development/6. Capstone - Photo Tourist Web Application /6.1. Technical Architecture and API Development Setup/capstone_demoapp/config/environment.rb:5)
+Started GET "/api/cities" for ::1 at 2017-04-12 13:47:09 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (21.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CitiesController#index as JSON
+  Rendering cities/index.json.jbuilder
+  [1m[36mCity Load (10.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  Rendered cities/_city.json.jbuilder (1.1ms)
+  Rendered cities/_city.json.jbuilder (0.2ms)
+  Rendered cities/index.json.jbuilder (60.1ms)
+Completed 200 OK in 86ms (Views: 54.4ms | ActiveRecord: 25.1ms)
+
+
+Started GET "/api/states" for ::1 at 2017-04-12 13:47:20 +0300
+Processing by StatesController#index as JSON
+  Rendering states/index.json.jbuilder
+  Rendered states/_state.json.jbuilder (22.6ms)
+  Rendered states/index.json.jbuilder (282.4ms)
+Completed 500 Internal Server Error in 296ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `created_at' for #<State _id: 58ee059a4a947ea2928fb9eb, name: "Maryland">
+Did you mean?  create_relation):
+    1: json.extract! state, :id, :name, :created_at, :updated_at
+    2: json.url state_url(state, format: :json)
+  
+app/views/states/_state.json.jbuilder:1:in `_app_views_states__state_json_jbuilder___2538857122189360445_70296013418960'
+app/views/states/index.json.jbuilder:1:in `_app_views_states_index_json_jbuilder___1630882772377963780_70296012177060'
+  Rendering /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (21.7ms)
+  Rendered /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (131.1ms)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/vesaeloranta/Desktop/Ruby on Rails Web Development/6. Capstone - Photo Tourist Web Application /6.1. Technical Architecture and API Development Setup/capstone_demoapp/config/environment.rb:5)
+Started GET "/api/states" for ::1 at 2017-04-12 13:50:06 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (21.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StatesController#index as JSON
+  Rendering states/index.json.jbuilder
+  Rendered states/_state.json.jbuilder (9.9ms)
+  Rendered states/index.json.jbuilder (17.0ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `created_at' for #<State _id: 58ee059a4a947ea2928fb9eb, name: "Maryland">
+Did you mean?  create_relation):
+    1: #json.extract! state, :id, :name, :created_at, :updated_at
+    2: json.id state.id.to_s
+    3: json.name state.name
+    4: json.created_at state.created_at
+    5: json.updated_at state.updated_at
+    6: json.url state_url(state, format: :json)
+  
+app/views/states/_state.json.jbuilder:4:in `_app_views_states__state_json_jbuilder___472385229936133628_70147718278080'
+app/views/states/index.json.jbuilder:1:in `_app_views_states_index_json_jbuilder__1449652850291191345_70147725063420'
+  Rendering /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.6ms)
+  Rendered /Users/vesaeloranta/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (76.5ms)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/vesaeloranta/Desktop/Ruby on Rails Web Development/6. Capstone - Photo Tourist Web Application /6.1. Technical Architecture and API Development Setup/capstone_demoapp/config/environment.rb:5)
+Started GET "/api/states" for ::1 at 2017-04-12 13:51:24 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (20.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StatesController#index as JSON
+  Rendering states/index.json.jbuilder
+  Rendered states/_state.json.jbuilder (0.9ms)
+  Rendered states/index.json.jbuilder (12.6ms)
+Completed 200 OK in 25ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
