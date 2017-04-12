@@ -415,3 +415,44 @@ Processing by StatesController#index as JSON
 Completed 200 OK in 25ms (Views: 17.9ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/vesaeloranta/Desktop/Ruby on Rails Web Development/6. Capstone - Photo Tourist Web Application /6.1. Technical Architecture and API Development Setup/capstone_demoapp/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (10.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mCity Load (31.9ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (15.3ms)[0m  [1m[31mDELETE FROM "cities" WHERE "cities"."id" = $1[0m  [["id", 1]]
+  [1m[35m (35.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "cities" WHERE "cities"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Baltimore"], ["created_at", 2017-04-12 11:17:59 UTC], ["updated_at", 2017-04-12 11:17:59 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/vesaeloranta/Desktop/Ruby on Rails Web Development/6. Capstone - Photo Tourist Web Application /6.1. Technical Architecture and API Development Setup/capstone_demoapp/config/environment.rb:5)
+Started GET "/api/states" for ::1 at 2017-04-12 14:18:32 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (21.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StatesController#index as JSON
+  Rendering states/index.json.jbuilder
+  Rendered states/_state.json.jbuilder (1.0ms)
+  Rendered states/index.json.jbuilder (44.3ms)
+Completed 200 OK in 64ms (Views: 55.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/cities" for ::1 at 2017-04-12 14:18:43 +0300
+Processing by CitiesController#index as JSON
+  Rendering cities/index.json.jbuilder
+  [1m[36mCity Load (25.9ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  Rendered cities/_city.json.jbuilder (1.2ms)
+  Rendered cities/index.json.jbuilder (80.6ms)
+Completed 200 OK in 108ms (Views: 15.5ms | ActiveRecord: 69.5ms)
+
+
